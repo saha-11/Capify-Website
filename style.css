@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Background image */
+    background-image: url('app_icon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+/* Optional overlay for readability */
+body::before {
+    content: '';
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.3); /* dark overlay */
+    z-index: -1;
+}
+
+/* Header */
+header {
+    padding: 60px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFF1E6; /* header color */
+    text-shadow: 0 0 15px #FFF1E6, 0 0 30px #FFD1A4;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #FFF1E6;
+}
+header {
+    padding: 100px 20px 40px; /* pushes everything down */
+}
+
+/* CAPIFY title */
+header h1 {
+    margin-top: 40px; /* moves it slightly down */
+    font-size: 4.5em; /* bigger title */
+}
+
+/* Subtitle */
+header p {
+    margin-top: 15px;
+    font-size: 1.5em; /* bigger subtitle */
+}
+
+/* Main Section */
+main {
+    padding: 50px 20px;
+}
+
+/* Download Button with Float Animation and same color as title */
+.download-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background-color: #FFF1E6; /* same as header */
+    color: #5A1A1A; /* text on button to contrast */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #FFF1E6, 0 0 50px #FFD1A4;
+    animation: floatPulse 2s infinite alternate; /* button floats */
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #FFD1A4, 0 0 70px #FFF1E6;
+}
+
+/* Floating animation */
+@keyframes floatPulse {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 0 25px #FFF1E6, 0 0 50px #FFD1A4;
+    }
+    50% {
+        transform: translateY(-8px);
+        box-shadow: 0 0 35px #FFD1A4, 0 0 70px #FFF1E6;
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 0 25px #FFF1E6, 0 0 50px #FFD1A4;
+    }
+}
+
+/* Features Section (static) */
+.features {
+    margin-top: 50px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    background: rgba(255,255,255,0.1);
+    margin: 15px auto;
+    padding: 20px;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+.features li:hover {
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+/* Features Title */
+.features h2 {
+    font-size: 2.3em; /* slightly bigger */
+    font-weight: bold;
+}
+
+/* Feature Points */
+.features li {
+    font-size: 1.3em; /* slightly bigger text */
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background: rgba(0,0,0,0.3);
+    padding: 25px;
+    margin-top: 50px;
+}
